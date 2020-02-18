@@ -1,0 +1,24 @@
+GET http://localhost:8890/o2o_war/superAdmin/listArea
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-02-18T031938.200.json
+
+###
+
+GET http://localhost:8890/o2o_war/superAdmin/listArea
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-02-18T031727.200.json
+
+###
+
+GET http://localhost:8890/o2o_war
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-02-18T031709.200.html
+
+###
+

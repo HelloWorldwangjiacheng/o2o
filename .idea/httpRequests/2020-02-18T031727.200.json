@@ -1,0 +1,19 @@
+{
+  "total": 2,
+  "rows": [
+    {
+      "areaId": 2,
+      "areaName": "西苑",
+      "priority": 3,
+      "createTime": null,
+      "lastEditTime": null
+    },
+    {
+      "areaId": 1,
+      "areaName": "东苑",
+      "priority": 1,
+      "createTime": null,
+      "lastEditTime": null
+    }
+  ]
+}
