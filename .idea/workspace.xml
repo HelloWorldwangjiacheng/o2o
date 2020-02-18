@@ -6,11 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87209cbf-f84a-4bcd-af36-d2d2a57dc951" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="87209cbf-f84a-4bcd-af36-d2d2a57dc951" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -429,9 +425,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ShopDaoTest.updateShopTest" />
+        <item itemvalue="JUnit.AreaDaoTest.queryAreaTest" />
         <item itemvalue="JUnit.ShopDaoTest.insertShop" />
         <item itemvalue="JUnit.AreaServiceImplTest.getAreaListTest" />
-        <item itemvalue="JUnit.AreaDaoTest.queryAreaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -464,7 +460,7 @@
       <workItem from="1581950784325" duration="23352000" />
       <workItem from="1582016509033" duration="643000" />
       <workItem from="1582027442235" duration="6000" />
-      <workItem from="1582031710519" duration="2427000" />
+      <workItem from="1582031710519" duration="2463000" />
     </task>
     <servers />
   </component>
