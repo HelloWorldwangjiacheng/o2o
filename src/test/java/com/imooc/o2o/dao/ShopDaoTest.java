@@ -30,7 +30,7 @@ public class ShopDaoTest extends BaseTest {
         shop.setOwner(owner);
         shop.setArea(area);
         shop.setShopCategory(shopCategory);
-        shop.setShopName("测试的店铺");
+        shop.setShopName("测试的店铺1");
         shop.setShopDesc("test");
         shop.setShopAddress("test");
         shop.setPhone("test");
@@ -46,7 +46,7 @@ public class ShopDaoTest extends BaseTest {
     @Test
     public void updateShopTest(){
         Shop shop = new Shop();
-        shop.setShopId(1L);
+        shop.setShopId(2L);
         shop.setShopDesc("描述");
         shop.setShopAddress("地址");
         shop.setLastEditTime(new Date());
