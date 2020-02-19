@@ -62,29 +62,37 @@ public class ShopManagementController {
         //2.注册店铺
         //判断shop和shopImg是否为空
         if (shop!=null && shopImg!=null){
-
             PersonInfo owner = new PersonInfo();
+            //TODO   session
             owner.setUserId(1L);
             shop.setOwner(owner);
             //这样就是一个随机的新的文件
-            File shopImgFile = new File(PathUtil.getImgBasePath()+ ImageUtil.getRandomFileName());
-            try{
-                shopImgFile.createNewFile();
-            }catch (IOException io){
-                modelMap.put("success",false);
-                modelMap.put("errorMsg",io.getMessage());
-                return modelMap;
-            }
+//            File shopImgFile = new File(PathUtil.getImgBasePath()+ ImageUtil.getRandomFileName());
+//            try{
+//                shopImgFile.createNewFile();
+//            }catch (IOException io){
+//                modelMap.put("success",false);
+//                modelMap.put("errorMsg",io.getMessage());
+//                return modelMap;
+//            }
 
+//            try {
+//                inputStreamToFile(shopImg.getInputStream(),shopImgFile);
+//            }catch (IOException e){
+//                modelMap.put("success",false);
+//                modelMap.put("errorMsg",e.getMessage());
+//                return modelMap;
+//            }
+
+//            ShopExecution shopExecution = shopService.addShop(shop, shopImgFile);
+            ShopExecution shopExecution = null;
             try {
-                inputStreamToFile(shopImg.getInputStream(),shopImgFile);
-            }catch (IOException e){
+                shopExecution  = shopService.addShop(shop, shopImg.getInputStream(), shopImg.getOriginalFilename());
+            }catch (Exception e){
                 modelMap.put("success",false);
                 modelMap.put("errorMsg",e.getMessage());
-                return modelMap;
             }
 
-            ShopExecution shopExecution = shopService.addShop(shop, shopImgFile);
             if (shopExecution.getState() == ShopStateEnum.CHECK.getState()){
                 modelMap.put("success",true);
             }else {
@@ -101,28 +109,28 @@ public class ShopManagementController {
         //3.返回结果,这个已经穿插在上面的各个异常中了，也就是返回的modelMap
     }
 
-    private static void inputStreamToFile(InputStream ins, File file){
-        FileOutputStream outputStream = null;
-        try {
-            outputStream = new FileOutputStream(file);
-            int bytesRead = 0;
-            byte[] buffer = new byte[1024];
-            while((bytesRead = ins.read(buffer)) != -1){
-                outputStream.write(buffer,0,bytesRead);
-            }
-        }catch (Exception e){
-            throw new RuntimeException("调用inputStreamToFile产生异常:" + e.getMessage());
-        }finally {
-            try {
-                if (outputStream != null){
-                    outputStream.close();
-                }
-                if (ins != null){
-                    ins.close();
-                }
-            }catch (IOException ioe){
-                throw new RuntimeException("inputStreamToFile关闭io产生异常：" + ioe.getMessage());
-            }
-        }
-    }
+//    private static void inputStreamToFile(InputStream ins, File file){
+//        FileOutputStream outputStream = null;
+//        try {
+//            outputStream = new FileOutputStream(file);
+//            int bytesRead = 0;
+//            byte[] buffer = new byte[1024];
+//            while((bytesRead = ins.read(buffer)) != -1){
+//                outputStream.write(buffer,0,bytesRead);
+//            }
+//        }catch (Exception e){
+//            throw new RuntimeException("调用inputStreamToFile产生异常:" + e.getMessage());
+//        }finally {
+//            try {
+//                if (outputStream != null){
+//                    outputStream.close();
+//                }
+//                if (ins != null){
+//                    ins.close();
+//                }
+//            }catch (IOException ioe){
+//                throw new RuntimeException("inputStreamToFile关闭io产生异常：" + ioe.getMessage());
+//            }
+//        }
+//    }
 }

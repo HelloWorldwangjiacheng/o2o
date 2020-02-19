@@ -16,10 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.util.Date;
 
 @Service
@@ -36,7 +33,7 @@ public class ShopServiceImpl implements ShopService {
      * 3.不是所有的方法都需要事务，如只有一条修改操作，只读操作不需要事务控制
      * 4.因为使用事务那在抛出异常必须使用RuntimeException
      */
-    public ShopExecution addShop(Shop shop, File shopImg) {
+    public ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName) {
         //传入的参数是否合法,空值判断
         if (shop == null){
             return new ShopExecution(ShopStateEnum.NULL_SHOP);
@@ -52,10 +49,11 @@ public class ShopServiceImpl implements ShopService {
             if (effectedShopNum <= 0){
                 throw new ShopOperationException("店铺创建失败");
             }else {
-                if (shopImg!=null){
+                if (shopImgInputStream !=null){
                     //存储图片
                     try {
-                        addShopImg(shop,shopImg);
+                        addShopImg(shop, shopImgInputStream, fileName);
+//                        addShopImg(shop, shopImg);
                     }catch (Exception ex){
                         throw new ShopOperationException("addShopImg error:"+ ex.getMessage());
                     }
@@ -77,22 +75,29 @@ public class ShopServiceImpl implements ShopService {
     /**
      * 添加商店图片
      * @param shop
-     * @param shopImg
+//     * @param shopImg
      */
-    private void addShopImg(Shop shop, File shopImg) {
+//    private void addShopImg(Shop shop, File shopImg) {
+//        //获取shop图片目录的相对值路径
+//        String dest = PathUtil.getShopImagePath(shop.getShopId());
+//
+//        FileItem fileItem = createFileItem(shopImg, "shopImgName");
+//        CommonsMultipartFile commonsMultipartFile = new CommonsMultipartFile(fileItem);
+//        String shopImgAddress = ImageUtil.generateThumbnail(commonsMultipartFile,dest);
+//        shop.setShopImg(shopImgAddress);
+//    }
+//
+//    private void addShopImg(Shop shop, CommonsMultipartFile shopImg) {
+//        //获取shop图片目录的相对值路径
+//        String dest = PathUtil.getShopImagePath(shop.getShopId());
+//        String shopImgAddress = ImageUtil.generateThumbnail(shopImg,dest);
+//        shop.setShopImg(shopImgAddress);
+//    }
+
+    private void addShopImg(Shop shop, InputStream shopImgInputStream, String fileName) {
         //获取shop图片目录的相对值路径
         String dest = PathUtil.getShopImagePath(shop.getShopId());
-
-        FileItem fileItem = createFileItem(shopImg, "shopImgName");
-        CommonsMultipartFile commonsMultipartFile = new CommonsMultipartFile(fileItem);
-        String shopImgAddress = ImageUtil.generateThumbnail(commonsMultipartFile,dest);
-        shop.setShopImg(shopImgAddress);
-    }
-
-    private void addShopImg(Shop shop, CommonsMultipartFile shopImg) {
-        //获取shop图片目录的相对值路径
-        String dest = PathUtil.getShopImagePath(shop.getShopId());
-        String shopImgAddress = ImageUtil.generateThumbnail(shopImg,dest);
+        String shopImgAddress = ImageUtil.generateThumbnail(shopImgInputStream, fileName, dest);
         shop.setShopImg(shopImgAddress);
     }
 
