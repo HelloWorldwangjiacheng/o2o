@@ -134,7 +134,9 @@ public class ShopManagementController {
 //            ShopExecution shopExecution = shopService.addShop(shop, shopImgFile);
             ShopExecution shopExecution = null;
             try {
-                shopExecution  = shopService.addShop(shop, shopImg.getInputStream(), shopImg.getOriginalFilename());
+//                shopExecution  = shopService.addShop(shop, shopImg.getInputStream(), shopImg.getOriginalFilename());
+//                shopExecution  = shopService.addShop(shop, shopImgFile);
+                shopExecution  = shopService.addShop(shop, shopImg);
             }catch (Exception e){
                 modelMap.put("success",false);
                 modelMap.put("errMsg",e.getMessage());

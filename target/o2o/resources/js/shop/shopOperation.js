@@ -62,7 +62,7 @@ $(function () {
             type:'POST',
             data:formData,
             contentType:false,
-            proceesData:false,
+            processData:false,
             cache:false,
             success:function (data) {
                 if (data.success){
@@ -70,7 +70,9 @@ $(function () {
                 }else {
                     $.toast('提交失败！'+data.errMsg);
                 }
+                $('#captcha_img').click();
             }
+
         });
     })
 })

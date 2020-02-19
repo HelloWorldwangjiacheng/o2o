@@ -24,29 +24,29 @@
 		<property name="prefix" value="/WEB-INF/html/"></property>
 		<property name="suffix" value=".html"></property>
 	</bean>
-<!--	&lt;!&ndash; 文件上传解析器 &ndash;&gt;-->
-<!--	<bean id="multipartResolver"-->
-<!--		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
-<!--		<property name="defaultEncoding" value="utf-8"></property>-->
-<!--		<property name="maxUploadSize" value="10485760000"></property>&lt;!&ndash; 最大上传文件大小 &ndash;&gt;-->
-<!--		<property name="maxInMemorySize" value="10960"></property>-->
-<!--	</bean>-->
-<!--	&lt;!&ndash; 在spring-mvc.xml文件中加入这段配置后，spring返回给页面的都是utf-8编码了 &ndash;&gt;-->
-<!--	<bean-->
-<!--		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">-->
-<!--		<property name="messageConverters">-->
-<!--			<list>-->
-<!--				<bean-->
-<!--					class="org.springframework.http.converter.StringHttpMessageConverter">-->
-<!--					<property name="supportedMediaTypes">-->
-<!--						<list>-->
-<!--							<value>text/html;charset=UTF-8</value>-->
-<!--						</list>-->
-<!--					</property>-->
-<!--				</bean>-->
-<!--			</list>-->
-<!--		</property>-->
-<!--	</bean>-->
+	<!-- 文件上传解析器 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="utf-8"></property>
+		<property name="maxUploadSize" value="10485760000"></property><!-- 最大上传文件大小 -->
+		<property name="maxInMemorySize" value="10960"></property>
+	</bean>
+	<!-- 在spring-mvc.xml文件中加入这段配置后，spring返回给页面的都是utf-8编码了 -->
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<bean
+					class="org.springframework.http.converter.StringHttpMessageConverter">
+					<property name="supportedMediaTypes">
+						<list>
+							<value>text/html;charset=UTF-8</value>
+						</list>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
 	<!-- 4.扫描web相关的bean -->
 	<context:component-scan base-package="com.imooc.o2o.web" />
 <!--	&lt;!&ndash; 5.权限拦截器 &ndash;&gt;-->
