@@ -1,8 +1,8 @@
 
 $(function () {
-    var initUrl = 'o2o_war/shop/getShopInitInfo';
+    var initUrl = '/o2o_war/shopAdmin/getShopInitInfo';
     var registerShopUrl = '/o2o_war/shopAdmin/registerShop';
-    alert(initUrl);
+    console.log(initUrl);
     //初始化
     getShopInitInfo();
     function getShopInitInfo() {
