@@ -10,6 +10,7 @@ import com.imooc.o2o.enums.ShopStateEnum;
 import com.imooc.o2o.service.AreaService;
 import com.imooc.o2o.service.ShopCategoryService;
 import com.imooc.o2o.service.ShopService;
+import com.imooc.o2o.util.CodeUtil;
 import com.imooc.o2o.util.HttpServletRequestUtil;
 import com.imooc.o2o.util.ImageUtil;
 import com.imooc.o2o.util.PathUtil;
@@ -71,6 +72,14 @@ public class ShopManagementController {
     private Map<String, Object> registerShop(HttpServletRequest request)  {
         //1.接受并转化相应的参数，包括店铺信息和图片信息
         Map<String,Object> modelMap = new HashMap<>();
+
+        if (!CodeUtil.checkVerifyCode(request)){
+            modelMap.put("success",false);
+            modelMap.put("errMsg","输入了错误的验证码");
+            return modelMap;
+        }
+
+
         String shopStr = HttpServletRequestUtil.getString(request, "shopStr");
         ObjectMapper objectMapper = new ObjectMapper();
         Shop shop = null;
@@ -79,7 +88,7 @@ public class ShopManagementController {
             shop = objectMapper.readValue(shopStr,Shop.class);
         }catch (Exception e){
             modelMap.put("success",false);
-            modelMap.put("errorMsg",e.getMessage());
+            modelMap.put("errMsg",e.getMessage());
             return modelMap;
         }
         CommonsMultipartFile shopImg = null;
@@ -93,7 +102,7 @@ public class ShopManagementController {
             shopImg = (CommonsMultipartFile) multipartHttpServletRequest.getFile("shopImg");
         }else {
             modelMap.put("success",false);
-            modelMap.put("errorMsg","上传图片不能为空");
+            modelMap.put("errMsg","上传图片不能为空");
             return modelMap;
         }
 
@@ -110,7 +119,7 @@ public class ShopManagementController {
 //                shopImgFile.createNewFile();
 //            }catch (IOException io){
 //                modelMap.put("success",false);
-//                modelMap.put("errorMsg",io.getMessage());
+//                modelMap.put("errMsg",io.getMessage());
 //                return modelMap;
 //            }
 
@@ -118,7 +127,7 @@ public class ShopManagementController {
 //                inputStreamToFile(shopImg.getInputStream(),shopImgFile);
 //            }catch (IOException e){
 //                modelMap.put("success",false);
-//                modelMap.put("errorMsg",e.getMessage());
+//                modelMap.put("errMsg",e.getMessage());
 //                return modelMap;
 //            }
 
@@ -128,19 +137,19 @@ public class ShopManagementController {
                 shopExecution  = shopService.addShop(shop, shopImg.getInputStream(), shopImg.getOriginalFilename());
             }catch (Exception e){
                 modelMap.put("success",false);
-                modelMap.put("errorMsg",e.getMessage());
+                modelMap.put("errMsg",e.getMessage());
             }
 
             if (shopExecution.getState() == ShopStateEnum.CHECK.getState()){
                 modelMap.put("success",true);
             }else {
                 modelMap.put("success",false);
-                modelMap.put("errorMsg",shopExecution.getStateInfo());
+                modelMap.put("errMsg",shopExecution.getStateInfo());
             }
             return modelMap;
         }else {
             modelMap.put("success",false);
-            modelMap.put("errorMsg","请输入店铺信息");
+            modelMap.put("errMsg","请输入店铺信息");
             return modelMap;
         }
 
