@@ -7,6 +7,7 @@ import com.imooc.o2o.entity.PersonInfo;
 import com.imooc.o2o.entity.Shop;
 import com.imooc.o2o.entity.ShopCategory;
 import com.imooc.o2o.enums.ShopStateEnum;
+import com.imooc.o2o.exceptions.ShopOperationException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.Date;
 
 import static org.junit.Assert.*;
@@ -48,5 +50,16 @@ public class ShopServiceTest extends BaseTest {
 //        ShopExecution shopExecution = shopService.addShop(shop, fileInputStream, shopImg.getName());
 //        ShopExecution shopExecution = shopService.addShop(shop, shopImg);
 //        assertEquals(ShopStateEnum.CHECK.getState(),shopExecution.getState());
+    }
+
+    @Test
+    public void modifyShopTest() throws ShopOperationException, FileNotFoundException {
+        Shop shop = new Shop();
+        shop.setShopId(1L);
+        shop.setShopName("修改之后的店铺的名称");
+        File shopImg = new File("C:\\Users\\w1586\\Desktop\\images\\upload\\item\\shop\\9\\2020022003482718679.jpg");
+        InputStream is = new FileInputStream(shopImg);
+        ShopExecution shopExecution = shopService.modifyShop(shop, is, "2020022003482718679.jpg");
+        System.out.println(shopExecution.getShop().getShopImg());
     }
 }
