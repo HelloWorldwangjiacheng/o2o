@@ -8,16 +8,12 @@
   <component name="ChangeListManager">
     <list default="true" id="87209cbf-f84a-4bcd-af36-d2d2a57dc951" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/ImageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/ImageUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/common/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/common/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/shopOperation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/shopOperation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/util/ImageUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/util/ImageUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/web/shopadmin/ShopManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/web/shopadmin/ShopManagementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/util/ImageUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/util/ImageUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/web/shopadmin/ShopManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/web/shopadmin/ShopManagementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/resources/js/common/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/resources/js/common/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/resources/js/shop/shopOperation.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/resources/js/shop/shopOperation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ShopDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ShopDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ShopDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ShopDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/imooc/o2o/dao/ShopDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/imooc/o2o/dao/ShopDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/dao/ShopDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/dao/ShopDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ShopDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ShopDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/imooc/o2o/dao/ShopDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/imooc/o2o/dao/ShopDaoTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -199,20 +195,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.30">
-    <configuration name="ImageUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.imooc.o2o.util.ImageUtil" />
-      <module name="o2o" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.imooc.o2o.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ShopDaoTest.queryShopListTest">
     <configuration name="ShopCategoryDaoTest.queryShopCategoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="o2o" />
       <extension name="coverage">
@@ -245,17 +228,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShopServiceTest.addShopTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShopDaoTest.queryShopListCountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="o2o" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.imooc.o2o.service.*" />
+          <option name="PATTERN" value="com.imooc.o2o.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.imooc.o2o.service" />
-      <option name="MAIN_CLASS_NAME" value="com.imooc.o2o.service.ShopServiceTest" />
-      <option name="METHOD_NAME" value="addShopTest" />
+      <option name="PACKAGE_NAME" value="com.imooc.o2o.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.imooc.o2o.dao.ShopDaoTest" />
+      <option name="METHOD_NAME" value="queryShopListCountTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShopDaoTest.queryShopListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="o2o" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imooc.o2o.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.imooc.o2o.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.imooc.o2o.dao.ShopDaoTest" />
+      <option name="METHOD_NAME" value="queryShopListTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -457,11 +456,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ShopDaoTest.queryShopListTest" />
+        <item itemvalue="JUnit.ShopDaoTest.queryShopListCountTest" />
         <item itemvalue="JUnit.ShopServiceTest.modifyShopTest" />
         <item itemvalue="JUnit.ShopDaoTest.queryByShopIdTest" />
         <item itemvalue="JUnit.ShopCategoryDaoTest.queryShopCategoryTest" />
-        <item itemvalue="JUnit.ShopServiceTest.addShopTest" />
-        <item itemvalue="Application.ImageUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -469,17 +468,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5f28d9fd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5f28d9fd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@7af0730c" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -500,7 +489,7 @@
       <workItem from="1582016509033" duration="643000" />
       <workItem from="1582027442235" duration="6000" />
       <workItem from="1582031710519" duration="43550000" />
-      <workItem from="1582177077912" duration="13038000" />
+      <workItem from="1582177077912" duration="20104000" />
     </task>
     <servers />
   </component>
