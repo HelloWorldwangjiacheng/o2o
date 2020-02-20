@@ -1,10 +1,20 @@
 
 $(function () {
+    var shopId = getQueryString('shopId');
+    var isEdit = shopId?true:false;
     var initUrl = '/o2o_war/shopAdmin/getShopInitInfo';
     var registerShopUrl = '/o2o_war/shopAdmin/registerShop';
-    console.log(initUrl);
+    var shopInfoUrl = '/o2o_war/shopAdmin/getShopById?shopId='+shopId;
+    var editShopUrl = '/o2o_war/shopAdmin/modifyShop';
     //初始化
-    getShopInitInfo();
+    if (!isEdit){
+        getShopInitInfo();
+    }else {
+        console.log(shopId);
+        getShopInfo(shopId);
+    }
+
+
     function getShopInitInfo() {
         $.getJSON(initUrl,function (data) {
             if (data.success){
@@ -23,8 +33,36 @@ $(function () {
         });
     }
 
+    function getShopInfo(shopId){
+        $.getJSON(shopInfoUrl,function (data) {
+            if (data.success){
+                var shop = data.shop;
+                $('#shop-name').val(shop.shopName);
+                $('#shop-address').val(shop.shopAddress);
+                $('#shop-phone').val(shop.phone);
+                $('#shop-desc').val(shop.shopDesc);
+
+                var shopCategory = '<option data-id="'+shop.shopCategory.shopCategoryId
+                    +'" selected>'+shop.shopCategory.shopCategoryName+'</option>';
+                var tempAreaHtml = '';
+                data.areaList.map(function (item, index) {
+                    tempAreaHtml += '<option data-id="'+item.areaId+'">'+item.areaName+'</option>';
+                });
+
+                $('#shop-category').html(shopCategory);
+                $('#shop-category').attr('disabled','disabled');
+                $('#area').html(tempAreaHtml);
+                // $('#area').attr('data-id',shop.areaId);
+                $("#area option[data-id='"+shop.area.areaId+"']").attr("selected","selected");
+            }
+        })
+    }
+
     $('#submit').click(function () {
         var shop = {};
+        if (isEdit){
+            shop.shopId = shopId;
+        }
         shop.shopName = $('#shop-name').val();
         shop.shopAddress = $('#shop-address').val();
         shop.phone = $('#shop-phone').val();
@@ -58,7 +96,7 @@ $(function () {
         formData.append('verifyCodeActual',verifyCodeActual);
 
         $.ajax({
-            url:registerShopUrl,
+            url:(isEdit ? editShopUrl : registerShopUrl),
             type:'POST',
             data:formData,
             contentType:false,
