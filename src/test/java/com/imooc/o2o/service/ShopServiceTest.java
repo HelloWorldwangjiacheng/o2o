@@ -17,6 +17,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Date;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -61,5 +62,16 @@ public class ShopServiceTest extends BaseTest {
         InputStream is = new FileInputStream(shopImg);
         ShopExecution shopExecution = shopService.modifyShop(shop, is, "2020022003482718679.jpg");
         System.out.println(shopExecution.getShop().getShopImg());
+    }
+
+    @Test
+    public void getShopListTest(){
+        Shop shopCondition = new Shop();
+        ShopCategory shopCategory = new ShopCategory();
+        shopCategory.setShopCategoryId(1L);
+        shopCondition.setShopCategory(shopCategory);
+        ShopExecution shopList = shopService.getShopList(shopCondition, 2, 4);
+        System.out.println("店铺列表数（一页有几个店铺）：" + shopList.getShopList().size());
+        System.out.println("店铺总数为："+shopList.getCount());
     }
 }

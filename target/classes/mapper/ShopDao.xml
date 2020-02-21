@@ -42,7 +42,7 @@
             </if>
             <if test="shopCondition.area != null and
                 shopCondition.area.areaId != null">
-                and a.area_id = #{shopCondition.area.areaId}
+                and s.area_id = #{shopCondition.area.areaId}
             </if>
             <if test="shopCondition.shopName != null">
                 and s.shop_name like '%${shopCondition.shopName}%'
@@ -82,11 +82,11 @@
 		<where>
             <if test="shopCondition.shopCategory != null and
                 shopCondition.shopCategory.shopCategoryId != null">
-                and sc.shop_category_id = #{shopCondition.shopCategory.shopCategoryId}
+                and s.shop_category_id = #{shopCondition.shopCategory.shopCategoryId}
             </if>
             <if test="shopCondition.area != null and
                 shopCondition.area.areaId != null">
-                and a.area_id = #{shopCondition.area.areaId}
+                and s.area_id = #{shopCondition.area.areaId}
             </if>
             <if test="shopCondition.shopName != null">
                 and s.shop_name like '%${shopCondition.shopName}%'
