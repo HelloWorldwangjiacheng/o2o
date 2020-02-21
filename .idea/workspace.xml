@@ -7,11 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87209cbf-f84a-4bcd-af36-d2d2a57dc951" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/PageCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ShopService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ShopService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/impl/ShopServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/impl/ShopServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/imooc/o2o/service/ShopServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/imooc/o2o/service/ShopServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ShopManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ShopManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/web/shopadmin/ShopManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/web/shopadmin/ShopManagementController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/o2o.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/dao/ShopDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/dao/ShopDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/service/ShopService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/service/ShopService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/service/impl/ShopServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/service/impl/ShopServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/web/shopadmin/ShopManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/web/shopadmin/ShopManagementController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/mapper/ShopDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/mapper/ShopDao.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -181,6 +185,20 @@
       </list>
     </option>
   </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 7 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+        </path>
+        <path>
+          <item name="Found 7 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="o2o" type="c588b436:RestServiceStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -193,7 +211,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ShopServiceTest.getShopListTest">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.30">
     <configuration name="ShopDaoTest.queryByShopIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="o2o" />
       <extension name="coverage">
@@ -466,7 +484,17 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4321013b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4321013b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@74c67713" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -488,7 +516,7 @@
       <workItem from="1582027442235" duration="6000" />
       <workItem from="1582031710519" duration="43550000" />
       <workItem from="1582177077912" duration="20392000" />
-      <workItem from="1582261448790" duration="2928000" />
+      <workItem from="1582261448790" duration="5468000" />
     </task>
     <servers />
   </component>

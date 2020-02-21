@@ -42,6 +42,55 @@ public class ShopManagementController {
     @Autowired
     private AreaService areaService;
 
+    @GetMapping("/getShopManagementInfo")
+    @ResponseBody
+    public Map<String,Object> getShopManagementInfo(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+        Long shopId = HttpServletRequestUtil.getLong(request,"shopId");
+        if (shopId<=0){
+            Object currentShopObj = request.getSession().getAttribute("currentShop");
+            if (currentShopObj == null){
+                modelMap.put("redirect",true);
+                modelMap.put("url","/o2o_war/shop/shopList");
+            }else{
+                Shop currentShop = (Shop) currentShopObj;
+                modelMap.put("redirect",false);
+                modelMap.put("shopId",currentShop.getShopId());
+            }
+        }else {
+            Shop currentShop = new Shop();
+            currentShop.setShopId(shopId);
+            request.getSession().setAttribute("currentShop",currentShop);
+            modelMap.put("redirect",false);
+        }
+
+        return modelMap;
+    }
+
+    @GetMapping("/getShopList")
+    @ResponseBody
+    public Map<String,Object> getShopList(HttpServletRequest request) {
+        Map<String, Object> modelMap = new HashMap<>();
+
+        PersonInfo user = new PersonInfo();
+        user.setUserId(1L);
+        request.getSession().setAttribute("user",user);
+        user = (PersonInfo) request.getSession().getAttribute("user");
+        user.setUserId(1L);
+        try {
+            Shop shopCondition = new Shop();
+            shopCondition.setOwner(user);
+            ShopExecution shopExecution = shopService.getShopList(shopCondition, 0, 100);
+            modelMap.put("shopList",shopExecution.getShopList());
+            modelMap.put("user",user);
+            modelMap.put("success",true);
+        }catch (Exception e){
+            modelMap.put("success",false);
+            modelMap.put("errMsg",e.getMessage());
+        }
+        return modelMap;
+    }
+
     @GetMapping("/getShopById")
     @ResponseBody
     public Map<String,Object> getShopById(HttpServletRequest request){
