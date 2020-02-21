@@ -11,7 +11,12 @@ public class ShopAdminController {
 
     @GetMapping("/shopOperation")
     public String shopOperation(){
-
+        //已经在spring-web.xml里面定义了转发地址prefix以及加了后缀
         return "shop/shopOperation";
+    }
+
+    @GetMapping("/shopList")
+    public String shopList(){
+        return "shop/shopList";
     }
 }
