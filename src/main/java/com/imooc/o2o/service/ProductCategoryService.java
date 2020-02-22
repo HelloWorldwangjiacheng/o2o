@@ -1,6 +1,8 @@
 package com.imooc.o2o.service;
 
+import com.imooc.o2o.dto.ProductCategoryExecution;
 import com.imooc.o2o.entity.ProductCategory;
+import com.imooc.o2o.exceptions.ProductCategoryOperationException;
 
 import java.util.List;
 
@@ -11,4 +13,8 @@ public interface ProductCategoryService {
      * @return List<ProductCategory>
      */
     List<ProductCategory> getProductCategoryList(Long shopId);
+
+    ProductCategoryExecution batchAddProductCategory(List<ProductCategory> productCategoryList)
+            throws ProductCategoryOperationException;
+
 }

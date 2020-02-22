@@ -1,10 +1,14 @@
 package com.imooc.o2o.service.impl;
 
 import com.imooc.o2o.dao.ProductCategoryDao;
+import com.imooc.o2o.dto.ProductCategoryExecution;
 import com.imooc.o2o.entity.ProductCategory;
+import com.imooc.o2o.enums.ProductCategoryStateEnum;
+import com.imooc.o2o.exceptions.ProductCategoryOperationException;
 import com.imooc.o2o.service.ProductCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,5 +22,27 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
     public List<ProductCategory> getProductCategoryList(Long shopId) {
         List<ProductCategory> productCategories = productCategoryDao.queryProductCategoryList(shopId);
         return productCategories;
+    }
+
+    @Override
+    @Transactional
+    public ProductCategoryExecution batchAddProductCategory(List<ProductCategory> productCategoryList)
+            throws ProductCategoryOperationException {
+        //空值判断
+        if (productCategoryList!=null && productCategoryList.size()>0){
+            try{
+                int effectNum = productCategoryDao.batchInsertProductCategory(productCategoryList);
+                if (effectNum<=0){
+                    throw new ProductCategoryOperationException("店铺类别创建失败");
+                }else{
+                    return new ProductCategoryExecution(ProductCategoryStateEnum.SUCCESS);
+                }
+            }catch (Exception e){
+                throw new ProductCategoryOperationException("batchAddProductCategory error:"+e.getMessage());
+            }
+        }else {
+            return new ProductCategoryExecution(ProductCategoryStateEnum.EMPTY_LIST);
+        }
+
     }
 }

@@ -7,18 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87209cbf-f84a-4bcd-af36-d2d2a57dc951" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/shop/productCategoryManagement.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/shop/productCategoryManagement.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/productCategoryManagement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ProductCategoryExecution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/exceptions/ProductCategoryOperationException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ShopAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ShopAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/web/shopadmin/ProductCategoryManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/web/shopadmin/ProductCategoryManagementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/web/shopadmin/ShopAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/web/shopadmin/ShopAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductCategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductCategoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductCategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/impl/ProductCategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/impl/ProductCategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ProductCategoryManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ProductCategoryManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ProductCategoryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProductCategoryDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/imooc/o2o/dao/ProductCategoryDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/imooc/o2o/dao/ProductCategoryDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/dao/ProductCategoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/dao/ProductCategoryDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/ProductCategoryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ProductCategoryDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/web/shopadmin/ProductCategoryManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/web/shopadmin/ProductCategoryManagementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/web/shopadmin/ShopAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/web/shopadmin/ShopAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/mapper/ProductCategoryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/mapper/ProductCategoryDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/imooc/o2o/dao/ProductCategoryDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/imooc/o2o/dao/ProductCategoryDaoTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +63,8 @@
         <option value="HTML File" />
         <option value="JUnit4 Test Class" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -109,7 +109,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resources/css/shop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -125,11 +125,11 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\java\com\imooc\o2o\dto" />
       <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\webapp\resources\css\shop" />
       <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\webapp\resources\js\shop" />
       <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\webapp\WEB-INF\html\shop" />
       <recent name="C:\Users\w1586\IdeaProjects\o2o\src\test\resources" />
-      <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\resources" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -215,7 +215,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.30">
+  <component name="RunManager" selected="JUnit.ProductCategoryDaoTest.batchInsertProductCategoryTest">
+    <configuration name="ProductCategoryDaoTest.batchInsertProductCategoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="o2o" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imooc.o2o.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.imooc.o2o.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.imooc.o2o.dao.ProductCategoryDaoTest" />
+      <option name="METHOD_NAME" value="batchInsertProductCategoryTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductCategoryDaoTest.queryProductCategoryList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="o2o" />
       <extension name="coverage">
@@ -275,22 +291,6 @@
       <option name="PACKAGE_NAME" value="com.imooc.o2o.service" />
       <option name="MAIN_CLASS_NAME" value="com.imooc.o2o.service.ShopServiceTest" />
       <option name="METHOD_NAME" value="getShopListTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShopServiceTest.modifyShopTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="o2o" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.imooc.o2o.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.imooc.o2o.service" />
-      <option name="MAIN_CLASS_NAME" value="com.imooc.o2o.service.ShopServiceTest" />
-      <option name="METHOD_NAME" value="modifyShopTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -477,11 +477,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductCategoryDaoTest.batchInsertProductCategoryTest" />
         <item itemvalue="JUnit.ProductCategoryDaoTest.queryProductCategoryList" />
         <item itemvalue="JUnit.ShopServiceTest.getShopListTest" />
         <item itemvalue="JUnit.ShopDaoTest.queryShopListTest" />
         <item itemvalue="JUnit.ShopDaoTest.queryShopListCountTest" />
-        <item itemvalue="JUnit.ShopServiceTest.modifyShopTest" />
       </list>
     </recent_temporary>
   </component>
@@ -513,7 +513,7 @@
       <workItem from="1582177077912" duration="20392000" />
       <workItem from="1582261448790" duration="5903000" />
       <workItem from="1582286263185" duration="11702000" />
-      <workItem from="1582356742716" duration="824000" />
+      <workItem from="1582356742716" duration="6090000" />
     </task>
     <servers />
   </component>
