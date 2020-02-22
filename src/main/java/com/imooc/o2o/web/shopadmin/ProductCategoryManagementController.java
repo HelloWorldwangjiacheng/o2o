@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -51,6 +52,7 @@ public class ProductCategoryManagementController {
         Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
         for (ProductCategory productCategory : productCategoryList) {
             productCategory.setShopId(currentShop.getShopId());
+            productCategory.setCreateTime(new Date());
         }
         if (productCategoryList != null && productCategoryList.size() > 0) {
             try {
