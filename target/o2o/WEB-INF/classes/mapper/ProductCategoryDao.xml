@@ -8,6 +8,7 @@
 		SELECT *
 		FROM tb_product_category
         where shop_id=#{shopId}
+        order by priority desc;
 	</select>
 
 </mapper>
