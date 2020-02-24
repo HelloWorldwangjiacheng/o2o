@@ -93,4 +93,15 @@ public class ShopDaoTest extends BaseTest {
         int i = shopDao.queryShopCount(shopCondition);
         System.out.println(i);
     }
+
+    @Test
+    public void nomTest(){
+        System.out.println(Integer.valueOf(2) == Integer.valueOf(2));
+        System.out.println(new Integer(2) == new Integer(2));
+        System.out.println((new Integer(2)) == 2);
+        System.out.println(Integer.valueOf(2).intValue() == 2);
+        System.out.println(new Integer(2).equals(new Integer(2)));
+    }
+
+
 }

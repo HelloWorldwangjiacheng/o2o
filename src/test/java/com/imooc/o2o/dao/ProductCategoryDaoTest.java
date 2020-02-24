@@ -3,7 +3,9 @@ package com.imooc.o2o.dao;
 import com.imooc.o2o.BaseTest;
 import com.imooc.o2o.entity.ProductCategory;
 import com.imooc.o2o.entity.Shop;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
@@ -12,6 +14,7 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ProductCategoryDaoTest extends BaseTest {
 
     @Autowired
@@ -44,5 +47,18 @@ public class ProductCategoryDaoTest extends BaseTest {
 
         int effectedNum = productCategoryDao.batchInsertProductCategory(productCategoryList);
         assertEquals(2,effectedNum);
+    }
+
+    @Test
+    public void deleteProductCategory(){
+        Long shopId = 1L;
+        List<ProductCategory> productCategoryList = productCategoryDao.queryProductCategoryList(shopId);
+        for (ProductCategory productCategory : productCategoryList){
+            if ("商品类别1".equals(productCategory.getProductCategoryName())||
+                    "商品类别2".equals(productCategory.getProductCategoryName())){
+                int i = productCategoryDao.deleteProductCategory(productCategory.getProductCategoryId(), productCategory.getShopId());
+                assertEquals(1,i);
+            }
+        }
     }
 }

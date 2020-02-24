@@ -5,6 +5,7 @@ import com.imooc.o2o.dto.Result;
 import com.imooc.o2o.entity.ProductCategory;
 import com.imooc.o2o.entity.Shop;
 import com.imooc.o2o.enums.ProductCategoryStateEnum;
+import com.imooc.o2o.exceptions.ProductCategoryOperationException;
 import com.imooc.o2o.service.ProductCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,14 +24,14 @@ public class ProductCategoryManagementController {
     @Autowired
     private ProductCategoryService productCategoryService;
 
+    /**
+     * 展示商品类别列表
+     * @param request
+     * @return
+     */
     @GetMapping("/getProductCategoryList")
     @ResponseBody
     public Result<List<ProductCategory>> getProductCategoryList(HttpServletRequest request) {
-//        // To be removed
-//        Shop shop = new Shop();
-//        shop.setShopId(1L);
-//        request.getSession().setAttribute("currentShop",shop);
-
         Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
         List<ProductCategory> list = null;
         if (currentShop != null && currentShop.getShopId() > 0) {
@@ -42,6 +43,12 @@ public class ProductCategoryManagementController {
         }
     }
 
+    /**
+     * 添加商品类别
+     * @param productCategoryList
+     * @param request
+     * @return
+     */
     @PostMapping("/addProductCategorys")
     @ResponseBody
     public Map<String, Object> addProductCategorys(
@@ -69,6 +76,33 @@ public class ProductCategoryManagementController {
                 return modelMap;
             }
         } else {
+            modelMap.put("success", false);
+            modelMap.put("errMsg", "请至少输入一个商品类别");
+        }
+        return modelMap;
+    }
+
+    @ResponseBody
+    @PostMapping("/removeProductCategory")
+    public Map<String,Object> removeProductCategory(Long productCategoryId,HttpServletRequest request){
+        Map<String,Object> modelMap = new HashMap<>();
+        if (productCategoryId!=null && productCategoryId>0){
+            try {
+                Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
+                ProductCategoryExecution pe = productCategoryService
+                        .deleteProductCategory(productCategoryId,currentShop.getShopId());
+                if (pe.getState() == ProductCategoryStateEnum.SUCCESS.getState()) {
+                    modelMap.put("success", true);
+                } else {
+                    modelMap.put("success", false);
+                    modelMap.put("errMsg", pe.getStateInfo());
+                }
+            }catch (ProductCategoryOperationException e){
+                modelMap.put("success", false);
+                modelMap.put("errMsg", e.getMessage());
+                return modelMap;
+            }
+        }else {
             modelMap.put("success", false);
             modelMap.put("errMsg", "请至少输入一个商品类别");
         }
