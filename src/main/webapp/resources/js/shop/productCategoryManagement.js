@@ -1,9 +1,9 @@
 $(function() {
-	// var shopId = 1;
+	// var shopId = getQueryString('shopId');
 	var listUrl = '/o2o_war/shopAdmin/getProductCategoryList';
 	var addUrl = '/o2o_war/shopAdmin/addProductCategorys';
 	var deleteUrl = '/o2o_war/shopAdmin/removeProductCategory';
-
+	// console.log(shopId);
 	getList();
 	$.getJSON(
 		listUrl,
@@ -106,7 +106,7 @@ $(function() {
 						type : 'POST',
 						data : {
 							productCategoryId : target.dataset.id,
-							shopId : shopId
+							// shopId : shopId
 						},
 						dataType : 'json',
 						success : function(data) {
