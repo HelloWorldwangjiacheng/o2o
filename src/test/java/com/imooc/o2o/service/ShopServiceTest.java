@@ -1,6 +1,7 @@
 package com.imooc.o2o.service;
 
 import com.imooc.o2o.BaseTest;
+import com.imooc.o2o.dto.ImageHolder;
 import com.imooc.o2o.dto.ShopExecution;
 import com.imooc.o2o.entity.Area;
 import com.imooc.o2o.entity.PersonInfo;
@@ -60,7 +61,8 @@ public class ShopServiceTest extends BaseTest {
         shop.setShopName("修改之后的店铺的名称");
         File shopImg = new File("C:\\Users\\w1586\\Desktop\\images\\upload\\item\\shop\\9\\2020022003482718679.jpg");
         InputStream is = new FileInputStream(shopImg);
-        ShopExecution shopExecution = shopService.modifyShop(shop, is, "2020022003482718679.jpg");
+        ImageHolder imageHolder = new ImageHolder("2020022003482718679.jpg",is);
+        ShopExecution shopExecution = shopService.modifyShop(shop, imageHolder);
         System.out.println(shopExecution.getShop().getShopImg());
     }
 

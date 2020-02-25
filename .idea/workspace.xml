@@ -7,13 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87209cbf-f84a-4bcd-af36-d2d2a57dc951" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductImgDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProductDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProductImgDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/imooc/o2o/dao/ProductDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/imooc/o2o/dao/ProductImgDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ImageHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ProductExecution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/enums/ProductStateEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/exceptions/ProductOperationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/imooc/o2o/service/ProductServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ShopService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ShopService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/impl/ShopServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/impl/ShopServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/ImageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/ImageUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ShopManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ShopManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/imooc/o2o/service/ShopServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/imooc/o2o/service/ShopServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/service/ShopService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/service/ShopService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/service/impl/ShopServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/service/impl/ShopServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/util/ImageUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/util/ImageUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/web/shopadmin/ShopManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/web/shopadmin/ShopManagementController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/imooc/o2o/service/ShopServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/imooc/o2o/service/ShopServiceTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,8 +71,8 @@
         <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
         <option value="JUnit4 Test Class" />
       </list>
     </option>
@@ -107,27 +118,27 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/enums" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.imooc.o2o.dao" />
       <recent name="com.imooc.o2o.service" />
+      <recent name="com.imooc.o2o.dao" />
       <recent name="com.imooc.o2o.service.impl" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\java\com\imooc\o2o\enums" />
       <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\java\com\imooc\o2o\dto" />
       <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\webapp\resources\css\shop" />
       <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\webapp\resources\js\shop" />
       <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\webapp\WEB-INF\html\shop" />
-      <recent name="C:\Users\w1586\IdeaProjects\o2o\src\test\resources" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -213,23 +224,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ProductDaoTest.insertProduct">
-    <configuration name="ProductCategoryDaoTest.deleteProductCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="o2o" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.imooc.o2o.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.imooc.o2o.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.imooc.o2o.dao.ProductCategoryDaoTest" />
-      <option name="METHOD_NAME" value="deleteProductCategory" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ProductServiceTest.addProductTest">
     <configuration name="ProductDaoTest.insertProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="o2o" />
       <extension name="coverage">
@@ -289,6 +284,22 @@
       <option name="PACKAGE_NAME" value="com.imooc.o2o.dao" />
       <option name="MAIN_CLASS_NAME" value="com.imooc.o2o.dao.ProductImgDaoTest" />
       <option name="METHOD_NAME" value="queryProductImgListTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceTest.addProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="o2o" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imooc.o2o.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.imooc.o2o.service" />
+      <option name="MAIN_CLASS_NAME" value="com.imooc.o2o.service.ProductServiceTest" />
+      <option name="METHOD_NAME" value="addProductTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -475,11 +486,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductServiceTest.addProductTest" />
         <item itemvalue="JUnit.ProductDaoTest.insertProduct" />
         <item itemvalue="JUnit.ProductImgDaoTest.queryProductImgListTest" />
         <item itemvalue="JUnit.ProductImgDaoTest.batchInsertProductImgTest" />
         <item itemvalue="JUnit.ProductImgDaoTest.deleteProductImgByProductId" />
-        <item itemvalue="JUnit.ProductCategoryDaoTest.deleteProductCategory" />
       </list>
     </recent_temporary>
   </component>
@@ -487,17 +498,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@71ea7020" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@71ea7020" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@66a0a7f8" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -522,7 +523,8 @@
       <workItem from="1582261448790" duration="5903000" />
       <workItem from="1582286263185" duration="11702000" />
       <workItem from="1582356742716" duration="18573000" />
-      <workItem from="1582539290705" duration="8666000" />
+      <workItem from="1582539290705" duration="17957000" />
+      <workItem from="1582605300074" duration="1720000" />
     </task>
     <servers />
   </component>

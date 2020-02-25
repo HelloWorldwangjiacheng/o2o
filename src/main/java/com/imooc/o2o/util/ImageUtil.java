@@ -1,5 +1,7 @@
 package com.imooc.o2o.util;
 
+import ch.qos.logback.core.util.FileUtil;
+import com.imooc.o2o.dto.ImageHolder;
 import lombok.extern.slf4j.Slf4j;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
@@ -19,24 +21,24 @@ public class ImageUtil {
     private static final SimpleDateFormat sDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
     private static final Random r = new Random();
 
-//    public static String generateThumbnail(CommonsMultipartFile thumbnail, String targetAddress){
-//        String realFileName = getRandomFileName();
-//        String extension = getFileExtension(thumbnail);
-//        makeDirPath(targetAddress);
-//        String relativeAddress = targetAddress + realFileName + extension;
-//        File dest = new File(PathUtil.getImgBasePath()+relativeAddress);
-//        try {
-//            Thumbnails.of(thumbnail.getInputStream())
-//                    .size(200,200)
-////                    .watermark(Positions.BOTTOM_RIGHT,ImageIO.read(new File(basePath+"/watermark.jpg")),0.25f)
-//                    .outputQuality(0.8f)
-//                    .toFile(dest);
-//        } catch (Exception ioe){
-//            ioe.printStackTrace();
-//            throw new RuntimeException("创建缩略图失败："+ioe.getMessage());
-//        }
-//        return relativeAddress;
-//    }
+    public static String generateNormalImg(ImageHolder thumbnail, String targetAddr) {
+        //获取不重复的随机名
+        String realFileName = getRandomFileName();
+        //获取文件扩展名如png、jpg等
+        String extension = getFileExtension(thumbnail.getImageName());
+        //如果目标路径不存在，则自动创建
+        makeDirPath(targetAddr);
+        String relativeAddr = targetAddr + realFileName + extension;
+        File dest = new File(PathUtil.getImgBasePath() + relativeAddr);
+        try {
+            Thumbnails.of(thumbnail.getImage()).size(337, 640)
+                    .outputQuality(0.9f)
+                    .toFile(dest);
+        } catch (IOException e) {
+            throw new RuntimeException("创建缩略图失败：" + e.toString());
+        }
+        return relativeAddr;
+    }
 
 //    public static String generateThumbnail(File thumbnail, String targetAddress){
 //        String realFileName = getRandomFileName();
@@ -57,15 +59,15 @@ public class ImageUtil {
 //        return relativeAddress;
 //    }
 
-    public static String generateThumbnail(InputStream thumbnail, String fileName, String targetAddress){
+    public static String generateThumbnail(ImageHolder thumbnail, String targetAddress){
         String realFileName = getRandomFileName();
-        String extension = getFileExtension(fileName);
+        String extension = getFileExtension(thumbnail.getImageName());
         makeDirPath(targetAddress);
         String relativeAddress = targetAddress + realFileName + extension;
 
         File dest = new File(PathUtil.getImgBasePath() + relativeAddress);
         try {
-            Thumbnails.of(thumbnail)
+            Thumbnails.of(thumbnail.getImage())
                     .size(200,200)
 //                    .watermark(Positions.BOTTOM_RIGHT,ImageIO.read(new File(basePath+"\\watermark.jpg")),0.25f)
                     .outputQuality(0.8f)
@@ -140,4 +142,6 @@ public class ImageUtil {
                 .outputQuality(0.8f)
                 .toFile("C:\\Users\\w1586\\Desktop\\hei.jpg");
     }
+
+
 }
