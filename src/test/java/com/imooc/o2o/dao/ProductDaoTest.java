@@ -59,6 +59,35 @@ public class ProductDaoTest extends BaseTest {
     }
 
     @Test
+    public void queryProductByProductIdTest(){
+        Product product = productDao.queryProductByProductId(5);
+        System.out.println(product.toString());
+    }
+
+    @Test
+    public void deleteProductTest(){
+        int effectNum = productDao.deleteProduct(5L,1L);
+        assertEquals(1,effectNum);
+    }
+
+    @Test
     public void updateProduct() {
+
+        Shop shop1 = new Shop();
+        shop1.setShopId(1L);
+
+        Product product1 = new Product();
+        product1.setProductName("测试111111111111111111");
+        product1.setProductDesc("测试Desc11111111111111111");
+        product1.setImgAddress("test1");
+        product1.setPriority(1);
+        product1.setEnableStatus(1);
+        product1.setCreateTime(new Date());
+        product1.setLastEditTime(new Date());
+        product1.setShop(shop1);
+        product1.setProductId(3L);
+
+        int effectNum = productDao.updateProduct(product1);
+        assertEquals(1,effectNum);
     }
 }
