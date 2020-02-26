@@ -28,6 +28,7 @@ public class ProductServiceTest extends BaseTest {
     @Autowired
     private ProductService productService;
 
+
     @Test
     public void addProductTest() throws FileNotFoundException {
         Product product = new Product();
@@ -54,10 +55,37 @@ public class ProductServiceTest extends BaseTest {
         List<ImageHolder> productImgList = new ArrayList<>();
         productImgList.add(new ImageHolder(file1.getName(),fileInputStream1));
         productImgList.add(new ImageHolder(file2.getName(),fileInputStream2));
-
         //添加商品认证
         ProductExecution productExecution = productService.addProduct(product, imageHolder, productImgList);
         assertEquals(ProductStateEnum.SUCCESS.getState(),productExecution.getState());
+    }
 
+    @Test
+    public void modifyProductTest() throws FileNotFoundException {
+        Product product = new Product();
+        Shop shop = new Shop();
+        shop.setShopId(1L);
+        ProductCategory productCategory = new ProductCategory();
+        productCategory.setProductCategoryId(1L);
+        product.setProductId(4L);
+        product.setShop(shop);
+        product.setProductCategory(productCategory);
+        product.setProductName("红烧肉");
+        product.setProductDesc("红烧肉");
+        //创建缩略图文件流
+        File file = new File("C:\\Users\\w1586\\Desktop\\images\\hua.jpg");
+        FileInputStream fileInputStream = new FileInputStream(file);
+        ImageHolder imageHolder = new ImageHolder(file.getName(), fileInputStream);
+        //创建两个商品详情图文件流并将他们添加到详情图列表中
+        File file1 = new File("C:\\Users\\w1586\\Desktop\\images\\heihei.jpg");
+        FileInputStream fileInputStream1 = new FileInputStream(file);
+        File file2 = new File("C:\\Users\\w1586\\Desktop\\images\\hua.jpg");
+        FileInputStream fileInputStream2 = new FileInputStream(file);
+        List<ImageHolder> productImgList = new ArrayList<>();
+        productImgList.add(new ImageHolder(file1.getName(),fileInputStream1));
+        productImgList.add(new ImageHolder(file2.getName(),fileInputStream2));
+        //添加商品认证
+        ProductExecution productExecution = productService.modifyProduct(product, imageHolder, productImgList);
+        assertEquals("红烧肉",productExecution.getProduct().getProductName());
     }
 }
