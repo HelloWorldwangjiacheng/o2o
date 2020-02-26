@@ -8,22 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="87209cbf-f84a-4bcd-af36-d2d2a57dc951" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ProductManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ProductManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/imooc/o2o/service/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/imooc/o2o/service/ProductServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/service/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/service/impl/ProductServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/web/shopadmin/ProductManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/web/shopadmin/ProductManagementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ProductDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ProductDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/o2o.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/dao/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/dao/ProductDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/service/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/service/impl/ProductServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/web/shopadmin/ProductManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/web/shopadmin/ProductManagementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/mapper/ProductDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/mapper/ProductDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/mapper/ProductImgDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/mapper/ProductImgDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/imooc/o2o/service/ProductServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/imooc/o2o/service/ProductServiceTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -498,17 +485,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1b133de5" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1b133de5" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@dece647" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -536,7 +513,7 @@
       <workItem from="1582539290705" duration="17957000" />
       <workItem from="1582605300074" duration="8064000" />
       <workItem from="1582648745866" duration="11346000" />
-      <workItem from="1582718823129" duration="11301000" />
+      <workItem from="1582718823129" duration="11921000" />
     </task>
     <servers />
   </component>
@@ -555,16 +532,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/impl/ProductServiceImpl.java</url>
-          <line>119</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
