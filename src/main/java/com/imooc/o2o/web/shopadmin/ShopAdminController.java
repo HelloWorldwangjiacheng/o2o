@@ -17,16 +17,25 @@ public class ShopAdminController {
 
     @GetMapping("/shopList")
     public String shopList(){
+        //转发至店铺列表页面
         return "shop/shopList";
     }
 
     @GetMapping("/shopManagement")
     public String shopManagement(){
+        //转发至店铺管理页面
         return "shop/shopManagement";
     }
 
     @GetMapping("/productCategoryManagement")
     public String productCategoryManagement(){
+        // 转发至商品类别管理页面
         return "shop/productCategoryManagement";
+    }
+
+    @GetMapping("/productOperation")
+    public String productOperation(){
+        // 转发至商品添加/编辑页面
+        return "shop/productOperation";
     }
 }
