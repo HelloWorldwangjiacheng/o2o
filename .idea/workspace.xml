@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="o2o:war" />
@@ -8,9 +11,15 @@
   <component name="ChangeListManager">
     <list default="true" id="87209cbf-f84a-4bcd-af36-d2d2a57dc951" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/web/shopadmin/ProductManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/web/shopadmin/ProductManagementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/web/shopadmin/ProductManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/web/shopadmin/ProductManagementController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ProductDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProductDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/imooc/o2o/dao/ProductDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/imooc/o2o/dao/ProductDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/dao/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/dao/ProductDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/service/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/service/impl/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ProductDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ProductDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/imooc/o2o/dao/ProductDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/imooc/o2o/dao/ProductDaoTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +75,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductService.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -99,6 +111,9 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="MyBatisLogPluginparameters" value="Parameters:" />
+    <property name="MyBatisLogPluginpreparing" value="Preparing:" />
+    <property name="MyBatisLogPluginrunning" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -109,7 +124,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -189,10 +204,10 @@
     <treeState>
       <expand>
         <path>
-          <item name="Found 7 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="Found 18 services " type="fcff1e1b:RestServiceStructure$RootNode" />
         </path>
         <path>
-          <item name="Found 7 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="Found 18 services " type="fcff1e1b:RestServiceStructure$RootNode" />
           <item name="o2o" type="c588b436:RestServiceStructure$ProjectNode" />
         </path>
       </expand>
@@ -211,7 +226,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.30">
+  <component name="RunManager" selected="JUnit.ProductDaoTest.queryProductList">
     <configuration name="ProductDaoTest.deleteProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="o2o" />
       <extension name="coverage">
@@ -244,6 +259,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductDaoTest.queryProductList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="o2o" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imooc.o2o.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.imooc.o2o.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.imooc.o2o.dao.ProductDaoTest" />
+      <option name="METHOD_NAME" value="queryProductList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductDaoTest.updateProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="o2o" />
       <extension name="coverage">
@@ -255,22 +286,6 @@
       <option name="PACKAGE_NAME" value="com.imooc.o2o.dao" />
       <option name="MAIN_CLASS_NAME" value="com.imooc.o2o.dao.ProductDaoTest" />
       <option name="METHOD_NAME" value="updateProduct" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductServiceTest.addProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="o2o" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.imooc.o2o.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.imooc.o2o.service" />
-      <option name="MAIN_CLASS_NAME" value="com.imooc.o2o.service.ProductServiceTest" />
-      <option name="METHOD_NAME" value="addProductTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -473,11 +488,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductDaoTest.queryProductList" />
         <item itemvalue="JUnit.ProductServiceTest.modifyProductTest" />
         <item itemvalue="JUnit.ProductDaoTest.updateProduct" />
         <item itemvalue="JUnit.ProductDaoTest.deleteProductTest" />
         <item itemvalue="JUnit.ProductDaoTest.queryProductByProductIdTest" />
-        <item itemvalue="JUnit.ProductServiceTest.addProductTest" />
       </list>
     </recent_temporary>
   </component>
@@ -485,7 +500,17 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e55ed09" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e55ed09" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@50549ea7" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -513,7 +538,16 @@
       <workItem from="1582539290705" duration="17957000" />
       <workItem from="1582605300074" duration="8064000" />
       <workItem from="1582648745866" duration="11346000" />
-      <workItem from="1582718823129" duration="11921000" />
+      <workItem from="1582718823129" duration="12535000" />
+      <workItem from="1582804947235" duration="946000" />
+      <workItem from="1582805932884" duration="3356000" />
+      <workItem from="1582812291919" duration="409000" />
+      <workItem from="1582812734912" duration="249000" />
+      <workItem from="1582813011567" duration="1032000" />
+      <workItem from="1582814072602" duration="1159000" />
+      <workItem from="1582815264474" duration="771000" />
+      <workItem from="1582816068662" duration="714000" />
+      <workItem from="1582816813057" duration="2864000" />
     </task>
     <servers />
   </component>

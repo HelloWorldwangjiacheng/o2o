@@ -6,6 +6,9 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+/**
+ * @author w1586
+ */
 public interface ProductDao {
 
     /**
@@ -15,9 +18,9 @@ public interface ProductDao {
      * @param pageSize
      * @return
      */
-//    List<Product> queryProductList(@Param("productCondition") Product productCondition,
-//                                   @Param("rowIndex") int rowIndex,
-//                                   @Param("pageSize") int pageSize);
+    List<Product> queryProductList(@Param("productCondition") Product productCondition,
+                                   @Param("rowIndex") int rowIndex,
+                                   @Param("pageSize") int pageSize);
 
     /**
      * 查询对应的商品总数
@@ -27,7 +30,7 @@ public interface ProductDao {
     int queryProductCount(@Param("productCondition") Product productCondition);
 
     /**
-     *
+     *  根据productId产品编号来找到那个产品
      * @param productId
      * @return
      */
@@ -57,6 +60,7 @@ public interface ProductDao {
     /**
      * 删除商品
      * @param productId
+     * @param shopId
      * @return
      */
     int deleteProduct(@Param("productId") long productId, @Param("shopId") long shopId);

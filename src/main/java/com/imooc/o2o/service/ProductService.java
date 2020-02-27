@@ -8,17 +8,23 @@ import com.imooc.o2o.exceptions.ProductOperationException;
 import java.io.InputStream;
 import java.util.List;
 
+/**
+ * @author w1586
+ */
 public interface ProductService {
 
     /**
      * 添加商品信息以及图片处理
-     *
+     * @param product
+     * @param thumbnail
+     * @param productImgHolderList
      * @return ProductExecution
      * @throws ProductOperationException
      */
     ProductExecution addProduct(Product product,
                                 ImageHolder thumbnail,
-                                List<ImageHolder> productImgList) throws ProductOperationException;
+                                List<ImageHolder> productImgHolderList)
+            throws ProductOperationException;
 
     /**
      * 查询商品泪飙并分页，可输入的条件有：商品名(模糊)，商品状态，店铺Id，商品类别
@@ -36,7 +42,16 @@ public interface ProductService {
      */
     Product getProductById(Long productId);
 
+    /**
+     * 更新该商品记录以及图片记录
+     * @param product
+     * @param thumbnail
+     * @param productImgHolderList
+     * @return
+     * @throws ProductOperationException
+     */
     ProductExecution modifyProduct(Product product,
                                    ImageHolder thumbnail,
-                                   List<ImageHolder> productImgHolderList) throws ProductOperationException;
+                                   List<ImageHolder> productImgHolderList)
+            throws ProductOperationException;
 }

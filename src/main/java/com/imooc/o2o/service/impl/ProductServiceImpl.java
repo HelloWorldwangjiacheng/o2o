@@ -10,6 +10,7 @@ import com.imooc.o2o.enums.ProductStateEnum;
 import com.imooc.o2o.exceptions.ProductOperationException;
 import com.imooc.o2o.service.ProductService;
 import com.imooc.o2o.util.ImageUtil;
+import com.imooc.o2o.util.PageCalculator;
 import com.imooc.o2o.util.PathUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * @author w1586
+ */
 @Service
 public class ProductServiceImpl implements ProductService {
 
@@ -81,18 +85,36 @@ public class ProductServiceImpl implements ProductService {
 
     }
 
+    /**
+     * 得到 这一页的商品数据
+     * @param productCondition
+     * @param pageIndex
+     * @param pageSize
+     * @return
+     */
     @Override
     public ProductExecution getProductList(Product productCondition,
                                            int pageIndex,
                                            int pageSize)
     {
-
-        return null;
+        //页码转换成成数据库的行码，并调用Dao层取回指定页码的商品列表
+        int rowIndex = PageCalculator.calculateRowIndex(pageIndex, pageSize);
+        List<Product> productList = productDao.queryProductList(productCondition, rowIndex, pageSize);
+        //基于同样的查询条件返回该条件下的商品总数
+        int count = productDao.queryProductCount(productCondition);
+        ProductExecution productExecution = new ProductExecution();
+        productExecution.setProductList(productList);
+        productExecution.setCount(count);
+        return productExecution;
     }
 
+    /**
+     * 通过productId找到对应的product
+     * @param productId
+     * @return
+     */
     @Override
     public Product getProductById(Long productId) {
-
         return productDao.queryProductByProductId(productId);
     }
 
