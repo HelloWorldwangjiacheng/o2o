@@ -44,7 +44,7 @@ public class ProductServiceImpl implements ProductService {
      * @throws ProductOperationException
      */
     @Override
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public ProductExecution addProduct(Product product,
                                        ImageHolder thumbnail,
                                        List<ImageHolder> productImgHolderList)
@@ -87,10 +87,10 @@ public class ProductServiceImpl implements ProductService {
 
     /**
      * 得到 这一页的商品数据
-     * @param productCondition
-     * @param pageIndex
-     * @param pageSize
-     * @return
+     * @param productCondition 产品
+     * @param pageIndex 数据库中的一条记录
+     * @param pageSize 一页的最多记录的上限
+     * @return ProductExecution 返回
      */
     @Override
     public ProductExecution getProductList(Product productCondition,
@@ -110,7 +110,7 @@ public class ProductServiceImpl implements ProductService {
 
     /**
      * 通过productId找到对应的product
-     * @param productId
+     * @param productId 产品Id
      * @return
      */
     @Override
@@ -119,7 +119,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     /**
      *  1.若无缩略图参数有值，则处理缩略图，
      *  若原先存在缩略图则先删除在添加新的图，之后获取缩略图相对路径并赋值给product
@@ -172,8 +172,8 @@ public class ProductServiceImpl implements ProductService {
 
     /**
      * 添加详情图队列（批量添加图片）
-     * @param product
-     * @param productImgHolderList
+     * @param product 传进去的product对象
+     * @param productImgHolderList 详情图列表
      */
     private void addProductImgList(Product product, List<ImageHolder> productImgHolderList) {
         //获取图片存储路径，这里直接存放到相应店铺的文件夹底下
@@ -204,8 +204,8 @@ public class ProductServiceImpl implements ProductService {
 
     /**
      * 添加缩略图
-     * @param product
-     * @param thumbnail
+     * @param product product对象
+     * @param thumbnail 缩略图
      */
     private void addThumbnail(Product product, ImageHolder thumbnail) {
         String dest = PathUtil.getShopImagePath(product.getShop().getShopId());
@@ -215,7 +215,7 @@ public class ProductServiceImpl implements ProductService {
 
     /**
      * 删除某个商品下的所有详情图
-     * @param productId
+     * @param productId 产品Id
      */
     private void deleteProductImgList(Long productId){
         //根据product获取原来的图片

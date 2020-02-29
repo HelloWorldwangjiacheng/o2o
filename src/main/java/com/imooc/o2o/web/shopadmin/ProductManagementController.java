@@ -61,7 +61,8 @@ public class ProductManagementController {
         //从当前的session中获取店铺信息，主要是获取shopId
         Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
         //空值判断
-        if ((pageIndex >= 0) && (pageSize >= 0) && (currentShop != null) && (currentShop.getShopId() != null)) {
+        if ((pageIndex >= 0) && (pageSize >= 0) &&
+                (currentShop != null) && (currentShop.getShopId() != null)) {
             //获取传入的需要检索的条件，包括是否需要从某个商品类别以及模糊查找商品名去筛选某个店铺下的商品列表
             //筛选条件可以排列组合
             Long productCategoryId = HttpServletRequestUtil.getLong(request, "productCategoryId");
