@@ -10,26 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87209cbf-f84a-4bcd-af36-d2d2a57dc951" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/HeadLineDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/HeadLineService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/impl/HeadLineServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/frontend/MainPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/HeadLineDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/imooc/o2o/heihei/a.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/frontend/FrontendController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/frontend/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/frontend/index/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/frontend/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/entity/HeadLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/entity/HeadLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/impl/ProductCategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/impl/ProductCategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ShopCategoryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ShopCategoryDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/entity/HeadLine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/entity/HeadLine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/service/impl/ProductCategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/service/impl/ProductCategoryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ShopCategoryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ShopCategoryDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/o2o.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/entity/HeadLine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/entity/HeadLine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/service/impl/ProductCategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/service/impl/ProductCategoryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/web/shopadmin/ShopAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/com/imooc/o2o/web/shopadmin/ShopAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/mapper/ShopCategoryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/classes/mapper/ShopCategoryDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/o2o/WEB-INF/html/shop/productManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/o2o/WEB-INF/html/shop/productManagement.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +114,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="MyBatisLogPluginindexNum" value="30" />
+    <property name="MyBatisLogPluginindexNum" value="44" />
     <property name="MyBatisLogPluginparameters" value="Parameters:" />
     <property name="MyBatisLogPluginpreparing" value="Preparing:" />
     <property name="MyBatisLogPluginrunning" value="true" />
@@ -138,7 +124,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resources/js/shop" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/images/upload" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -153,18 +139,18 @@
       <recent name="com.imooc.o2o.dao" />
       <recent name="com.imooc.o2o.service.impl" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\webapp\resources\js\shop" />
-      <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\webapp\WEB-INF\html\shop" />
-      <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\webapp\resources\css\shop" />
-      <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\java\com\imooc\o2o\enums" />
-      <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\java\com\imooc\o2o\dto" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\webapp\resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\webapp\resources" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\webapp\resources\js\frontend" />
+      <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\webapp\resources\css\frontend" />
+      <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\webapp\WEB-INF\html\frontend" />
+      <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\webapp\resources\js\shop" />
+      <recent name="C:\Users\w1586\IdeaProjects\o2o\src\main\webapp\WEB-INF\html\shop" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -340,6 +326,11 @@
             <option name="CONTEXT_PATH" value="/o2o_war" />
           </settings>
         </artifact>
+        <file path="$USER_HOME$/Desktop/images/upload">
+          <settings>
+            <option name="CONTEXT_PATH" value="/upload" />
+          </settings>
+        </file>
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_30_o2o" />
@@ -352,6 +343,9 @@
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="51947" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="JRebel Debug">
+        <option name="DEBUG_PORT" value="64470" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -369,6 +363,21 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Debug">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
           <option name="USE_DEFAULT" value="true" />
@@ -525,6 +534,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.a.test1" />
+      <item itemvalue="JUnit.ProductDaoTest.deleteProductTest" />
+      <item itemvalue="JUnit.ProductDaoTest.queryProductList" />
+      <item itemvalue="JUnit.ProductDaoTest.updateProduct" />
+      <item itemvalue="JUnit.ProductServiceTest.modifyProductTest" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.30" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.a.test1" />
@@ -547,7 +564,12 @@
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@bd927f1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4c883d64" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1ef5f553" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@bd927f1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@683486bf" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -593,7 +615,7 @@
       <workItem from="1582912522954" duration="1066000" />
       <workItem from="1582955418311" duration="6614000" />
       <workItem from="1582988668049" duration="4978000" />
-      <workItem from="1583044818307" duration="7107000" />
+      <workItem from="1583044818307" duration="12723000" />
     </task>
     <servers />
   </component>
