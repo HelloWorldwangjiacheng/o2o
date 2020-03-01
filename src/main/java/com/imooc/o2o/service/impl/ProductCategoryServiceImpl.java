@@ -13,6 +13,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+/**
+ * @author w1586
+ */
 @Service
 public class ProductCategoryServiceImpl implements ProductCategoryService {
 
@@ -28,6 +31,12 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
         return productCategories;
     }
 
+    /**
+     * 批量添加商品类别
+     * @param productCategoryList
+     * @return
+     * @throws ProductCategoryOperationException
+     */
     @Override
     @Transactional
     public ProductCategoryExecution batchAddProductCategory(List<ProductCategory> productCategoryList)
@@ -50,6 +59,13 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
 
     }
 
+    /**
+     * 删除商品类别
+     * @param productCategoryId
+     * @param shopId
+     * @return
+     * @throws ProductCategoryOperationException
+     */
     @Override
     @Transactional
     public ProductCategoryExecution deleteProductCategory(Long productCategoryId, Long shopId)

@@ -11,7 +11,29 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
         <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
-        <link rel="stylesheet" href="../resources/css/shop/productManagement.css">
+<!--        <link rel="stylesheet" href="../resources/css/shop/productManagement.css">-->
+        <style>
+            .row-product {
+                border: 1px solid #999;
+                padding: .5rem;
+                border-bottom: none;
+            }
+            .row-product:last-child {
+                border-bottom: 1px solid #999;
+            }
+            .product-name {
+                white-space: nowrap;
+                overflow-x: scroll;
+            }
+            .product-wrap a {
+                margin-right: 1rem;
+            }
+
+            .content {
+                margin-left: 6px;
+                margin-right: 6px;
+            }
+        </style>
     </head>
 <body>
     <header class="bar bar-nav">
@@ -20,9 +42,9 @@
     <div class="content">
         <div class="content-block">
             <div class="row row-product">
-                <div class="col-30">商品名称</div>
+                <div class="col-33">商品名称</div>
                 <div class="col-20">优先级</div>
-                <div class="col-50">操作</div>
+                <div class="col-40">操作</div>
             </div>
             <div class="product-wrap">
                 <!-- <div class="row row-product">
